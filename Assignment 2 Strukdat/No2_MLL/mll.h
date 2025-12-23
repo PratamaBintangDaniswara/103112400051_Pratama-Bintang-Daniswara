@@ -11,38 +11,32 @@ struct infotypeChild {
     float ratingFilm;
 };
 
-// Info untuk Parent (Genre)
 struct infotypeParent {
     string IDGenre;
     string namaGenre;
 };
 
-// Pointer Declarations
 typedef struct NodeChild *adrChild;
 typedef struct NodeParent *adrParent;
 
-// Struktur Node Child (Double Linked List)
 struct NodeChild {
     infotypeChild info;
     adrChild next;
     adrChild prev;
 };
 
-// Struktur List Child (Punya First dan Last)
 struct ListChild {
     adrChild first;
     adrChild last;
 };
 
-// Struktur Node Parent (Double Linked List)
 struct NodeParent {
     infotypeParent info;
     NodeParent *next;
     NodeParent *prev;
-    ListChild child; // Setiap parent punya 1 List Child
+    ListChild child;
 };
 
-// Struktur List Parent (Punya First dan Last)
 struct ListParent {
     adrParent first;
     adrParent last;
@@ -68,3 +62,4 @@ void printStrukturMLL(ListParent LP);
 
 
 #endif
+
