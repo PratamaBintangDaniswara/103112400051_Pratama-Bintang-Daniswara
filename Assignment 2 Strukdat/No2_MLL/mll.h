@@ -48,8 +48,6 @@ struct ListParent {
     adrParent last;
 };
 
-// --- Prototipe Fungsi Sesuai Soal ---
-
 void createListParent(ListParent &LP);
 void createListChild(ListChild &LC);
 
@@ -67,5 +65,6 @@ void deleteAfterParent(ListParent &LP, adrParent Prec, adrParent &P);
 
 void searchFilmByRatingRange(ListParent LP, float minRating, float maxRating);
 void printStrukturMLL(ListParent LP);
+
 
 #endif
